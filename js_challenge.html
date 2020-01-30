@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-Game1.0</title>
+	<style type="text/css">
+		#shape{
+			background-color: red;
+			display: none;
+			position: relative;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<p> Time Taken : <span id="caltime"></span></p>
+
+	<div id="shape"></div>
+    
+    <script type="text/javascript">
+    	
+	    	var start=0
+	    	function bcolor(){
+
+	    		var ca='0123456789ABCDEF'.split('');
+	    		var sw='#';
+	    		for (var i=0;i<6;i++){
+
+	    			sw+=ca[Math.floor(Math.random()*16)];
+	    		}
+	    		return sw;
+	    	}
+	    	function pause(){
+	    		var top = Math.random() * 400;
+	    		var left = Math.random() * 400;
+	    		var height = Math.random() * 400;
+	    		var width = Math.random() * 400;
+	    		var border = Math.random() * 400;
+	    		document.getElementById("shape").style.backgroundColor = bcolor();
+	    		document.getElementById("shape").style.top = top +"px";
+	    		document.getElementById("shape").style.left = left +"px";
+	    		document.getElementById("shape").style.height = height +"px";
+	    		document.getElementById("shape").style.width = width +"px";
+	    		document.getElementById("shape").style.borderRadius = border +"px";
+	    		document.getElementById("shape").style.display="block";
+
+	    		start=new Date().getTime();
+
+	    	}
+	    	function calltimedelay(){
+
+	    		setTimeout(pause,Math.random()*2000);
+	    	}
+	    	
+	    	calltimedelay()	
+	    	document.getElementById("shape").onclick=function(){
+	             
+
+	    		document.getElementById("shape").style.display="none";
+
+	    		var end = new Date().getTime();
+	    		var timetaken = (end - start)/1000;
+	    		document.getElementById("caltime").innerHTML=timetaken + "s";
+	    		calltimedelay();
+	    } 
+
+
+
+    </script>
+</body>
+</html>

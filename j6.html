@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS6</title>
+</head>
+<body>
+	<h3>Let see how much 6th sense you have.</h3>
+	<p> Enter a number</p>
+	<input type="text" placeholder="Enter a number between 1 and 10" id="guess">
+	<button id="sub">Submit</button>
+	<script type="text/javascript">
+		document.getElementById("sub").onclick=function(){
+			var ran=Math.ceil(Math.random() * 10)
+			if (document.getElementById("guess").value == ran){
+
+				alert("You gussed right!")
+
+			}
+			else{
+
+				alert("You are horrible at gussing, The computer gussed "+ran )
+			}
+		}
+		
+
+
+
+	</script>
+</body>
+</html>

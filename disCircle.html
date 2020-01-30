@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle..</title>
+	<style type="text/css">
+      .circle{
+      	height:200px; 
+      	width:200px;
+      	border-radius: 50%;
+      	float: left;
+      	margin: 50px;
+      }
+      #rc{
+      	background-color: red;
+      }
+      #bc{
+      	background-color: blue;
+      }
+      #yc{
+      	background-color: yellow;
+      }
+
+
+	</style>
+</head>
+<body>
+	<div class="circle" id="rc"></div>
+	<div class="circle" id="bc"></div>
+	<div class="circle" id="yc"></div>
+
+	<script type="text/javascript">
+		document.getElementById("rc").onclick=function(){
+
+			document.getElementById("rc").style.display="none"
+		}
+		document.getElementById("bc").onclick=function(){
+
+			document.getElementById("bc").style.display="none"
+		}
+		document.getElementById("yc").onclick=function(){
+
+			document.getElementById("yc").style.display="none"
+		}
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	
+
+	</script>
+</head>
+<body>
+	<p id="text">Hi, click the button below</p>
+	<button id="click">Click Me!</button>
+
+	<p id="text2">JavaScript is ...</p>
+    <button id="secondbutton">ClickMe!</button>
+
+    <p id="text3"></p>
+    <button id="magic">Magic!</button>
+
+    <p id="text4">I will change color and size</p>
+    <button id="changeme">Change Me!</button>
+     <script type="text/javascript">
+		document.getElementById("click").onclick = function(){
+
+			document.getElementById("text").innerHTML="Hi Soumya!";
+		}   
+		document.getElementById("secondbutton").onclick=function() {
+			document.getElementById("text2").innerHTML="The"+document.getElementById("text2").innerHTML+"Awesome"
+		}
+		document.getElementById("magic").onclick=function() {
+			document.getElementById("text3").innerHTML="<marquee>I appear of nowhere</marquee>"
+		}
+		document.getElementById("changeme").onclick=function() {
+			document.getElementById("text4").style.color="red"
+			document.getElementById("text4").style.fontSize="30px"
+		}
+
+    </script>
+
+</body>
+</html>
